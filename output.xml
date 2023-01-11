@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.5 on win32)" generated="20230111 15:34:37.276" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Authentification" source="C:\Users\user19\projets\selenium\test-squash-autom\test_authentification.robot">
+<test id="s1-t1" name="Valid Login" line="13">
+<kw name="Open Browser To Home Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230111 15:34:37.622" level="INFO">Opening browser 'FireFox' to base url 'https://www.amazon.fr'.</msg>
+<msg timestamp="20230111 15:34:37.625" level="INFO">Firefox driver log is always forced to to: C:\Users\user19\projets\selenium\test-squash-autom\geckodriver-8.log</msg>
+<status status="PASS" starttime="20230111 15:34:37.621" endtime="20230111 15:34:45.566"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:37.619" endtime="20230111 15:34:45.567"/>
+</kw>
+<kw name="Accept Cookie">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>sp-cc-accept</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230111 15:34:45.583" endtime="20230111 15:34:45.998"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>sp-cc-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230111 15:34:46.000" level="INFO">Clicking element 'sp-cc-accept'.</msg>
+<status status="PASS" starttime="20230111 15:34:45.999" endtime="20230111 15:34:47.054"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:45.582" endtime="20230111 15:34:47.054"/>
+</kw>
+<kw name="Click To Login Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>nav-link-accountList-nav-line-1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230111 15:34:47.055" endtime="20230111 15:34:47.128"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>nav-link-accountList-nav-line-1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230111 15:34:47.130" level="INFO">Clicking element 'nav-link-accountList-nav-line-1'.</msg>
+<status status="PASS" starttime="20230111 15:34:47.129" endtime="20230111 15:34:47.733"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:47.055" endtime="20230111 15:34:47.733"/>
+</kw>
+<kw name="Send Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${LOGIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230111 15:34:47.736" level="INFO">Typing text 'aurelien69fb@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20230111 15:34:47.735" endtime="20230111 15:34:48.062"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:47.734" endtime="20230111 15:34:48.062"/>
+</kw>
+<kw name="Click To Continue">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>continue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230111 15:34:48.064" level="INFO">Clicking element 'continue'.</msg>
+<status status="PASS" starttime="20230111 15:34:48.063" endtime="20230111 15:34:49.206"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:48.063" endtime="20230111 15:34:49.206"/>
+</kw>
+<kw name="Send Password">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230111 15:34:49.209" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20230111 15:34:49.307" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230111 15:34:49.348" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230111 15:34:49.208" endtime="20230111 15:34:49.349"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:49.207" endtime="20230111 15:34:49.349"/>
+</kw>
+<kw name="Click To Submit">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>signInSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230111 15:34:49.351" level="INFO">Clicking element 'signInSubmit'.</msg>
+<status status="PASS" starttime="20230111 15:34:49.350" endtime="20230111 15:34:51.542"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:49.350" endtime="20230111 15:34:51.542"/>
+</kw>
+<kw name="Check UserName">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>nav-link-accountList-nav-line-1</arg>
+<arg>${USERNAME}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230111 15:34:51.882" level="INFO">Element 'nav-link-accountList-nav-line-1' contains text 'Aurelien'.</msg>
+<status status="PASS" starttime="20230111 15:34:51.543" endtime="20230111 15:34:51.882"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:51.543" endtime="20230111 15:34:51.883"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230111 15:34:51.893" endtime="20230111 15:34:55.871"/>
+</kw>
+<status status="PASS" starttime="20230111 15:34:37.618" endtime="20230111 15:34:55.872"/>
+</test>
+<doc>Test authentification using SeleniumLibrary.</doc>
+<status status="PASS" starttime="20230111 15:34:37.280" endtime="20230111 15:34:55.874"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Authentification">Test Authentification</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
